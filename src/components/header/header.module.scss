@@ -1,0 +1,116 @@
+.header {
+    background: linear-gradient(90deg, #001B2F 0%, #005695 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%; // Adiciona espaçamento interno
+    height: 20vh;
+    box-sizing: border-box; // Garante que padding não interfira na largura total
+}
+
+// Estilo da logo e título
+.logoHeader {
+    display: flex;
+    justify-content: flex-start; // Melhor alinhamento
+    align-items: center;
+    flex: 1; // Permite expansão proporcional
+    gap: 15px; // Espaçamento entre imagem e título
+
+    h1 {
+        font-size: 30px;
+        color: #FFF;
+        white-space: nowrap; // Impede quebra de linha no título
+    }
+}
+
+// Menu de navegação
+.navHeader {
+    flex: 2; // Proporção para se adaptar ao espaço disponível
+    display: flex;
+    justify-content: center; // Centraliza os links
+    align-items: center;
+
+    ul {
+        display: flex;
+        justify-content: space-evenly; // Espaça links de forma uniforme
+        align-items: center;
+        list-style: none;
+        width: 100%; // Garante que ocupe toda a largura disponível
+    }
+
+    .link {
+        color: #fff;
+        font-size: 20px;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #FFD700; // Cor de destaque ao passar o mouse
+        }
+    }
+}
+
+// Campo de busca
+.barraDeBusca {
+    flex: 1; // Adapta a largura proporcionalmente
+    max-width: 300px; // Limita a largura máxima
+    border: solid #FFF 2px;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 0 10px; // Adiciona espaçamento interno
+    box-sizing: border-box; // Garante que o padding não afete o tamanho
+    margin-right: 1%;
+
+    input {
+        background-color: transparent;
+        border: none;
+        width: 70%;
+        height: 5vh;
+        color: #FFF;
+
+        &::placeholder {
+            color: #FFF;
+            font-size: 16px;
+        }
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: #FFF;
+        font-size: 20px;
+    }
+}
+
+// Estilos para telas menores
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto; // Ajusta altura automaticamente
+        padding: 10px; // Reduz espaçamento interno
+    }
+
+    .logoHeader {
+        justify-content: center;
+        flex: none;
+        width: auto;
+        margin-bottom: 10px; // Espaçamento entre seções
+    }
+
+    .navHeader {
+        flex: none;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .barraDeBusca {
+        flex: none;
+        width: 100%;
+        max-width: none; // Remove limite de largura
+        margin-bottom: 10px;
+    }
+}
