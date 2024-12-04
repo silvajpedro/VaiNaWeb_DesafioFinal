@@ -1,6 +1,6 @@
 import lupa from '../../assets/lupa.png'
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
-import logoLivro from '../../assets/logoLivro.png'
+import logoLivro from '../../assets/logolivro.png'
 import Inicio from '../../pages/inicio/Inicio'
 import LivrosDoados from '../../pages/livrosDoados/LivrosDoados'
 import QueroDoar from '../../pages/queroDoar/QueroDoar'
